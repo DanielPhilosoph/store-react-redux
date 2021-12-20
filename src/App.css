@@ -67,6 +67,7 @@
 
 .header {
   text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .headerDiv {
@@ -77,9 +78,6 @@
 .cartMainDiv {
   display: block;
   margin-left: 25%;
-}
-
-.productsMainDiv {
 }
 
 .productInfo {
@@ -108,7 +106,7 @@
 }
 
 .addToCartBtn {
-  padding: 8px 18px;
+  padding: 4px 18px;
   background-color: #001ea1;
   color: white;
   border: none;

@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 import CartProduct from "./CartProduct";
-import * as actions from "../actions";
+import { buy } from "../helpers/helper";
 
 function Cart({ cart, buyAll }) {
   let total = 0;
@@ -34,16 +34,18 @@ function Cart({ cart, buyAll }) {
   );
 }
 
+// Transform the prop 'cart' to props
 const mapStateToProps = (state) => {
   return {
     cart: state.cart,
   };
 };
 
+// Transform the function buyAll to props
 const mapDispatchToProps = (dispatch) => {
   return {
     buyAll: () => {
-      dispatch({ type: actions.BUY });
+      dispatch(buy());
     },
   };
 };

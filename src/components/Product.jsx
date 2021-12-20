@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-import * as actions from "../actions";
+
+import { addToCart } from "../helpers/helper";
 
 function Product({ name, cost, amount, id, addToCart }) {
   if (amount === 0) {
@@ -26,10 +27,7 @@ function Product({ name, cost, amount, id, addToCart }) {
 const mapDispatchToProps = (dispatch) => {
   return {
     addToCart: (id, name, cost, amount) =>
-      dispatch({
-        type: actions.ADD_TO_CART,
-        payload: { id: id, name: name, cost: cost, amount: amount },
-      }),
+      dispatch(addToCart(id, name, cost, amount)),
   };
 };
 
