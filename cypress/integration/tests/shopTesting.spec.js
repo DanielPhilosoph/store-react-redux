@@ -1,6 +1,4 @@
 /* eslint-disable no-undef */
-import store from "../../../src/store";
-import * as actions from "../../../src/actions";
 
 beforeEach(() => {
   cy.visit("http://localhost:3000");
