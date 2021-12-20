@@ -139,6 +139,7 @@ function reducer(state = initialState, action) {
       }
 
     case actions.BUY:
+      return { ...state, cart: [] };
     default:
       return state;
   }

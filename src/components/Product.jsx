@@ -8,11 +8,15 @@ function Product({ name, cost, amount, id, addToCart }) {
   }
   return (
     <div>
-      <h3>{name}</h3>
-      <span>
+      <h3 className="productName">{name}</h3>
+      <span className="productInfo">
         ${cost} x {amount}
       </span>{" "}
-      <button type="button" onClick={() => addToCart(id, name, cost, amount)}>
+      <button
+        type="button"
+        className="addToCartBtn"
+        onClick={() => addToCart(id, name, cost, amount)}
+      >
         Add to cart
       </button>
     </div>

@@ -19,7 +19,7 @@ function Products({ items }) {
   });
 
   return (
-    <div>
+    <div className="productsMainDiv">
       <h2>Products</h2>
       <br />
       {currentProducts}
