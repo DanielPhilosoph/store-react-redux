@@ -6,7 +6,9 @@ import Product from "./Product";
 
 function Products({ items }) {
   //   let items = store.getState().products;
+  let isSomeProductsLeft = false;
   const currentProducts = items.map((item) => {
+    isSomeProductsLeft = !isSomeProductsLeft ? item.amount !== 0 : true;
     return (
       <Product
         id={item.id}
@@ -22,13 +24,12 @@ function Products({ items }) {
     <div className="productsMainDiv">
       <h2>Products</h2>
       <br />
-      {currentProducts}
+      {isSomeProductsLeft ? currentProducts : "No products for now"}
     </div>
   );
 }
 
 const mapStateToProps = (state) => {
-  console.log(state);
   return {
     items: state.products,
   };

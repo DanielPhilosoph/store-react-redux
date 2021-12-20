@@ -1,7 +1,7 @@
 import { createStore } from "@reduxjs/toolkit";
-import reducer from "./reducer";
+import productsReducer from "./reducer";
 
-const store = createStore(reducer);
+const store = createStore(productsReducer);
 
 store.subscribe(() => {
   console.log(store.getState());

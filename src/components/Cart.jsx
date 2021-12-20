@@ -25,7 +25,7 @@ function Cart({ cart, buyAll }) {
       <br />
       {cartProducts}
       <hr />
-      <h3>Total: ${total}</h3>
+      <h3 className="totalH3">Total: ${total}</h3>
       <hr />
       <button type="button" className="buyBtn" onClick={() => buyAll()}>
         Buy
